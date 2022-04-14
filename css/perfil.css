@@ -1,0 +1,110 @@
+.home-perfil{
+	height: 40vh;
+	overflow: hidden;
+	position: relative;
+	background-image: linear-gradient(-20deg, rgba(213,88,200,.6) 0%, rgba(36,210,146,.6) 100%), url("../images/home_perfil.jpg");
+	width:100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.perfil{
+	padding: 20px;
+	background-color:#37154E;
+}
+.home-titulo{
+	width: 70%;
+	margin: auto;
+}
+.home-titulo h1{
+	font-size: 65px;
+	font-weight: 900;
+	font-style: italic;
+	position: absolute;
+	bottom: 5px;
+	color:#FFFFFF;
+}
+
+.perfil-container{
+	width: 70%;
+	margin: auto;
+	align-items: center;
+	align-content: center;
+}
+
+.perfil-tit{
+	font-weight: 900;
+	font-size: 30px;
+	font-style: italic;
+	color: #ef3d4e;
+	text-align: left;
+	margin-bottom: 20px;
+}
+
+.perfil-text{
+	text-align: justify;
+	line-height: 20px;
+	margin-bottom: 20px;
+	color:#FFFFFF;
+}
+
+.perf hr{
+	margin-bottom: 20px;
+}
+
+.perfil-seccion{
+	display: flex;
+	width: 100%;
+}
+
+.perfil-seccion img{
+	width: 30%;
+	height: 30%;
+	margin: 0 30px 20px 0;
+	border-radius: 10px;
+}
+
+.perfil-seccion a{
+	font-weight: 600;
+	font-style: italic;
+	text-decoration: underline;
+	text-transform: capitalize;
+	color:#0090ef;
+}
+
+.perfil-columna{
+	width: 70%;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 768px){
+	
+.home-perfil{
+	height: 35vh;
+}
+
+.home-titulo h1{
+	font-size: 35px;
+}	
+
+.perfil-container{
+	width: 90%;
+}	
+	
+.perfil-seccion{
+	display: block;
+}	
+	
+.perfil-seccion img{
+	width: 100%;
+	margin: 0 30px 20px 0;
+	border-radius: 10px;
+}	
+	
+.perfil-columna{
+	width: 100%;
+}	
+	
+}

@@ -1,0 +1,139 @@
+/*HEADER*/
+
+.main-header{
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 150px;
+	width: 100vw;
+	padding: 0 10vw;
+	color: #ffd659;
+	z-index: 10;
+	transition: .4s ease-out;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+	text-transform: uppercase;
+}
+
+.nav-brand{
+	height: 130px;
+}
+
+.nav-links{
+	display: flex;
+	list-style: none;
+}
+
+.nav-link{
+	transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.nav-link:nth-of-type(2){
+	transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition-delay: .1s;
+}
+
+.nav-link:nth-of-type(3){
+	transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition-delay: .2s;
+}
+
+.nav-link:nth-of-type(4){
+	transition: opacity .4s ease-in-out, transform .6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transition-delay: .3s;
+}
+
+.nav-link a{
+	margin: .2rem;
+	padding: .5rem .5rem;
+	transition: .2s;
+}
+
+.nav-link a:hover{
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.menu-icon{
+	position: relative;
+	padding: 26px 10px;
+	cursor: pointer;
+	z-index: 1;
+	display: none;	
+}
+
+.menu-icon_line{
+	display: block;
+	position: relative;
+	background: #000000;
+	height: 2px;
+	width: 20px;
+	border-radius: 4px;
+	transition: background 1s ease;
+}
+
+.menu-icon_line::before{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 4px;
+	background: #000000;
+	transform: translateY(-5px);
+	transition: background 1s ease;
+}
+
+.menu-icon_line::after{
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border-radius: 4px;
+	background: #000000;
+	transform: translateY(5px);
+}
+
+.menu-btn{
+	/*display: none;*/
+	position: absolute;
+	top: -100px;
+}
+
+.menu-btn:focus ~ .menu-icon .menu_icon_line::before {
+	transform: translateY(-7px);
+}
+
+.menu-btn:focus ~ .menu-icon .menu_icon_line::after {
+	transform: translateY(7px);
+}
+
+.main-header.scrolled{
+	height: 150px;
+	background: rgba(39,31,57,.8);
+	color:#FFFFFF;
+}
+
+.main-header.scrolled .menu-icon_line, .main-header.scrolled .menu-icon_line::before, .main-header.scrolled .menu-icon_line::after {
+	background: #FFFFFF;
+}
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 768px){
+	
+	.nav-brand{
+	height: 80px;
+}
+	
+	h1{
+	font-size: 2rem;
+}
+	
+	.menu-icon{
+		display: none;
+	}
+	
+}
